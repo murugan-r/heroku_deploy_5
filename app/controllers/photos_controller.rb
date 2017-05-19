@@ -47,8 +47,6 @@ class PhotosController < ApplicationController
 
   def update
     @photo = Photo.find(params[:id])
-
-    @photo.user_id = params[:user_id]
     @photo.image = params[:image]
 
     save_status = @photo.save
